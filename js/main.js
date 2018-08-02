@@ -1,4 +1,4 @@
-// var myId = localStorage.getItem('idHajj');
+//var myId = localStorage.getItem('idHajj');
 var myId = 891131;
 
 var personArr = personalInfo.personalInfo;
