@@ -108,17 +108,21 @@ ul.list-all{
 
 .center-border {
     width: 100%;
-    background: #2ecc71;
     height: 100px;
     line-height: 100px;
     margin: 0 auto 10px;
 }
-.boxes-info a {
-    color: white;
+.boxes-info a{
+    color: black;
     padding: 0;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
     margin-bottom: -8px;
+}
+.boxes-info a:nth-child(1), .boxes-info a:nth-child(2) {
+    border-bottom: 1px solid #2ccc71;
+}
+
+.boxes-info a:nth-child(odd) {
+    border-right: 1px solid #2ccc71;
 }
 
 .profile-userpic {
