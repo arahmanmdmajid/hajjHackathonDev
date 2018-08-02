@@ -1,10 +1,26 @@
-console.log(personalInfo.personalInfo[0].firstName);
 
 
-var fullName = personalInfo.personalInfo[0].firstName + ' ' + personalInfo.personalInfo[0].lastName;
+var myId = "988746";
 
-$('.profile-usertitle-name').text(fullName);
-$('.profile-usertitle-job').text(personalInfo.personalInfo[0].uniqueID);
+
+var personArr = personalInfo.personalInfo;
+
+
+var filterData = personArr.filter(function(obj) {
+    return obj.uniqueID == myId;
+  });
+
+  var y = filterData.map(function(r) {
+    return r.firstName + ' '+ r.lastName;
+  });
+  var y1 = filterData.map(function(r) {
+    return r.uniqueID;
+  });
+  console.log(y.toString());
+  console.log(y1.toString());
+
+ $('.profile-usertitle-name').html(y);
+$('.profile-usertitle-job').text(y1);
 
 function initMap() {
     var directionsDisplay = new google.maps.DirectionsRenderer;
