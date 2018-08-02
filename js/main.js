@@ -61,9 +61,9 @@ $(".show-direction-btn").click(function () {
 
 
 /*info.html*/
-$('.profile-usertitle-name-info').html(y);
+$('.profile-usertitle-name-info').html(fullName);
 $(".img-haaji").attr("src", personalImg);
-$('.profile-fullName').html(y);
+$('.profile-fullName').html(fullName);
 $('.profile-nationality').html(nationality);
 $('.profile-mutawwifName').html(mutawwifName);
 
