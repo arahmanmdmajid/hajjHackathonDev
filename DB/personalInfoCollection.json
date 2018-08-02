@@ -1,0 +1,11 @@
+{
+"type":"personalInfoCollection",
+"personalInfo":[
+    {
+		"passportNumber":"AB00001",
+		"firstName":"AbdulAziz", 
+		"lastName":"MuhammadAbdulMajid",
+		"nationality":"Pakistani"
+	}
+]
+}

@@ -1,0 +1,12 @@
+{
+"type":"mutawwifInfoCollection",
+"mutawwifInfo":[
+    {
+		"mutawwifNumber":"01234",
+		"completeName":"Abdullah Hajj Co.", 
+		"primaryAddress":"1258 Al-Nuzha dist, Makkah",
+		"contactNumber":"02135485689",
+		"mobileNumber":"0501111111"
+	}
+]
+}
