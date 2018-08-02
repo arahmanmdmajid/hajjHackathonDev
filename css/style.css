@@ -16,12 +16,14 @@ ul.list-all{
 .profile-usertitle {
     text-align: center;
     margin-top: 20px;
-    background: #2ccc71;
+    /* background: #2ccc71; */
     color: white;
     margin-right: -15px;
     margin-left: -15px;
     padding: 10px 0 1px;
     margin-bottom: 10px;
+    background-color: #2c3e50;
+    color: wheat;
 }
 
 .profile-usertitle-name {
@@ -126,8 +128,8 @@ ul.list-all{
 }
 
 .profile-userpic {
-    width: 130px;
     height: 130px;
+    width: 130px;
     border-radius: 50%;
     margin: 0 auto;
     object-fit: cover;
