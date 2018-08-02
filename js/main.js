@@ -47,6 +47,12 @@ function initMap() {
     };
     document.getElementById('start').addEventListener('change', onChangeHandler);
     document.getElementById('end').addEventListener('change', onChangeHandler);
+
+    calculateAndDisplayRoute1(directionsService, directionsDisplay);
+    document.getElementById('mode').addEventListener('change', function() {
+        calculateAndDisplayRoute1(directionsService, directionsDisplay);
+    });
+
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
@@ -56,6 +62,25 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         origin: start,
         destination: end,
         travelMode: 'DRIVING'
+    }, function(response, status) {
+        if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+}
+
+
+function calculateAndDisplayRoute1(directionsService, directionsDisplay) {
+    var selectedMode = document.getElementById('mode').value;
+    directionsService.route({
+        origin: {lat: 21.42, lng: 39.82},  // Haram.
+        destination: {lat: 21.355, lng: 39.983},  // Arafat.
+        // Note that Javascript allows us to access the constant
+        // using square brackets and a string value as its
+        // "property."
+        travelMode: google.maps.TravelMode[selectedMode]
     }, function(response, status) {
         if (status === 'OK') {
             directionsDisplay.setDirections(response);
