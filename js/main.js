@@ -51,7 +51,6 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
    /*for testing only*/
   
 /*profile.html*/
->>>>>>> 656b5216dcc5794fcb66af1a0d1c993d62efc3e2
 $('.profile-usertitle-name').html(y);
 $('.profile-usertitle-job').text(y1);
 $(".img-haaji").attr("src", personalImg);
