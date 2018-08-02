@@ -41,6 +41,12 @@ function initMap() {
     };
     document.getElementById('start').addEventListener('change', onChangeHandler);
     document.getElementById('end').addEventListener('change', onChangeHandler);
+
+    calculateAndDisplayRoute1(directionsService, directionsDisplay);
+    document.getElementById('mode').addEventListener('change', function() {
+        calculateAndDisplayRoute1(directionsService, directionsDisplay);
+    });
+
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
@@ -59,20 +65,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     });
 }
 
-function initMap1() {
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    var directionsService = new google.maps.DirectionsService;
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: {lat: 37.77, lng: -122.447}
-    });
-    directionsDisplay.setMap(map);
-
-    calculateAndDisplayRoute1(directionsService, directionsDisplay);
-    document.getElementById('mode').addEventListener('change', function() {
-        calculateAndDisplayRoute1(directionsService, directionsDisplay);
-    });
-}
 
 function calculateAndDisplayRoute1(directionsService, directionsDisplay) {
     var selectedMode = document.getElementById('mode').value;
@@ -84,7 +76,7 @@ function calculateAndDisplayRoute1(directionsService, directionsDisplay) {
         // "property."
         travelMode: google.maps.TravelMode[selectedMode]
     }, function(response, status) {
-        if (status == 'OK') {
+        if (status === 'OK') {
             directionsDisplay.setDirections(response);
         } else {
             window.alert('Directions request failed due to ' + status);
