@@ -175,3 +175,7 @@ ul.list-all{
 .navbar {
     margin-bottom: 0;
 }
+
+#floating-panel{
+    z-index:9999;
+}
