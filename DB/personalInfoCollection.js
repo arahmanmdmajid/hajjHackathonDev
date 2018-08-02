@@ -6,13 +6,15 @@ var personalInfo = {
 		"firstName":"Adel",
 		"lastName":"Ali",
 		"nationality":"Saudi",
-		"imagePath":"img/891131.jpg"
+		"imagePath":"img/891131.jpg",
+		"mutawwifID":"AB123456"
 	},
 	{
 		"uniqueID":"988746",
 		"firstName":"AbdulAziz",
 		"lastName":"M.Abdul Majid",
 		"nationality":"Pakistani",
-		"imagePath":"img/988746.jpg"
+		"imagePath":"img/988746.jpg",
+		"mutawwifID":"BA412364"
 	}]
 };

@@ -1,13 +1,28 @@
 
-
 var myId = localStorage.getItem('id');
+if(localStorage.getItem('id') === null){
+	var myId = "988746";
+}
+
 
 
 var personArr = personalInfo.personalInfo;
-
+var mutawwifArr = mutawwifInfo.completeInfo;
 
 var filterData = personArr.filter(function(obj) {
     return obj.uniqueID == myId;
+  });
+
+  var mutawwifId = filterData.map(function(r){
+	   	 return r.mutawwifID;
+  });
+  
+  
+var mutawwifFilterData = mutawwifArr.filter(function(obj) {
+    return obj.uniqueID == mutawwifId;
+  });
+ var mutawwifName = mutawwifFilterData.map(function(r){
+	   	 return r.fullName;
   });
 
   var y = filterData.map(function(r) {
@@ -19,15 +34,35 @@ var filterData = personArr.filter(function(obj) {
   var personalImg = filterData.map(function(r) {
     return r.imagePath;
   });
-  console.log(y.toString());
-  console.log(y1.toString());
-  console.log(personalImg.toString());
+  var nationality = filterData.map(function(r){
+	   return r.nationality;
+  });
   
 
- $('.profile-usertitle-name').html(y);
+  /*for testing only*/
+ console.log(mutawwifFilterData);
+   console.log(mutawwifId.toString());
+  
+   /*for testing only*/
+  
+/*profile.html*/
+$('.profile-usertitle-name').html(y);
 $('.profile-usertitle-job').text(y1);
 $(".img-haaji").attr("src", personalImg);
+/*profile.html*/
 
+
+/*info.html*/
+$('.profile-usertitle-name-info').html(y);
+$(".img-haaji").attr("src", personalImg);
+$('.profile-fullName').html(y);
+$('.profile-nationality').html(nationality);
+$('.profile-mutawwifName').html(mutawwifName);
+
+/*info.html*/
+
+
+/*Goolge Map API Functions*/
 function initMap() {
     var directionsDisplay = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
@@ -64,5 +99,5 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         }
     });
 }
-
+/*Goolge Map API Functions*/
 
