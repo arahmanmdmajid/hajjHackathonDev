@@ -1,7 +1,8 @@
-
-
 var myId = localStorage.getItem('id');
 
+if (localStorage.getItem("myId") === null) {
+  window.location.href = "no.html"
+}
 
 var personArr = personalInfo.personalInfo;
 
@@ -13,18 +14,19 @@ var filterData = personArr.filter(function(obj) {
   var y = filterData.map(function(r) {
     return r.firstName + ' '+ r.lastName;
   });
-  var y1 = filterData.map(function(r) {
-    return r.uniqueID;
+  var y1 = filterData.map(function(s) {
+    return s.uniqueID;
   });
-  var personalImg = filterData.map(function(r) {
-    return r.imagePath;
+  var personalImg = filterData.map(function(t) {
+    return t.imagePath;
   });
+
   console.log(y.toString());
   console.log(y1.toString());
   console.log(personalImg.toString());
   
 
- $('.profile-usertitle-name').html(y);
+$('.profile-usertitle-name').html(y);
 $('.profile-usertitle-job').text(y1);
 $(".img-haaji").attr("src", personalImg);
 
