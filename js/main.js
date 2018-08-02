@@ -51,7 +51,7 @@ var mutawwifId = filterData.map(function (r) {
 });
 
 
-<<<<<<< HEAD
+
   var locationFilterData = locationsArr.filter(function(obj) {
     return obj.pilgrimId == myId;
   });
@@ -77,7 +77,6 @@ var pilgrimLocations = locationFilterData.map(function(r){
  console.log(pilgrimLocations);
    /*for testing only*/
   
-=======
 var mutawwifFilterData = mutawwifArr.filter(function (obj) {
   return obj.uniqueID == mutawwifId;
 });
@@ -105,14 +104,6 @@ var nationality = filterData.map(function (r) {
 });
 
 
-/*for testing only*/
-console.log(mutawwifFilterData);
-console.log(mutawwifId.toString());
-
-/*for testing only*/
-
->>>>>>> 4c3f1fe6c7dbb5e5203285cba4fc7398e8d7490f
-/*profile.html*/
 
 $('.profile-usertitle-name').html(fullName);
 $('.profile-usertitle-job').text(y1);
@@ -214,6 +205,3 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         }
     });
 }
-
-
-//});
