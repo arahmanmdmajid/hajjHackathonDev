@@ -61,9 +61,9 @@ $(".show-direction-btn").click(function () {
 
 
 /*info.html*/
-$('.profile-usertitle-name-info').html(y);
+$('.profile-usertitle-name-info').html(fullName);
 $(".img-haaji").attr("src", personalImg);
-$('.profile-fullName').html(y);
+$('.profile-fullName').html(fullName);
 $('.profile-nationality').html(nationality);
 $('.profile-mutawwifName').html(mutawwifName);
 
@@ -107,3 +107,17 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     }
   });
 }
+
+
+$(window).on('load', function() {
+  $('#collapseOne').collapse({toggle: true});
+  $('#collapseTwo').collapse({toggle: true});
+  $('#collapseThree').collapse({toggle: true});
+  $('#collapseFour').collapse({toggle: true});
+  $('#collapseFive').collapse({toggle: true});
+});
+
+var locationsArr = geolocation.pilgrimsLocationCollection;
+var locationFilterData = locationsArr.filter(function(obj) {
+  return obj.pilgrimId == myId;
+});
