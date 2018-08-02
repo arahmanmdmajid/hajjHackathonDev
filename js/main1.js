@@ -1,35 +1,70 @@
+$(window).on('load', function() {
+    $('#collapseOne').collapse({toggle: true});
+    $('#collapseTwo').collapse({toggle: true});
+    $('#collapseThree').collapse({toggle: true});
+    $('#collapseFour').collapse({toggle: true});
+    $('#collapseFive').collapse({toggle: true});
+})
+
 var myId = localStorage.getItem('idHajj');
 
-if (myId === null){
-    myId = '123456';
+if (myId === null) {
+  myId = " "
 }
+
 
 var personArr = personalInfo.personalInfo;
 var mutawwifArr = mutawwifInfo.completeInfo;
+var locationsArr = geolocation.pilgrimsLocationCollection;
 
-var filterData = personArr.filter(function(obj) {
+var filterData = personArr.filter(function (obj) {
   return obj.uniqueID == myId;
 });
 
-var mutawwifId = filterData.map(function(r){
+var mutawwifId = filterData.map(function (r) {
   return r.mutawwifID;
 });
 
 
-var mutawwifFilterData = mutawwifArr.filter(function(obj) {
+  var locationFilterData = locationsArr.filter(function(obj) {
+    return obj.pilgrimId == myId;
+  });
+
+
+  /*console.log(fullName.toString());
+  console.log(y1.toString());
+  console.log(personalImg.toString());*/
+
+  
+
+  var nationality = filterData.map(function(r){
+	   return r.nationality;
+  });
+  
+var pilgrimLocations = locationFilterData.map(function(r){
+    return r.pilgrimLocation;
+});
+  /*for testing only*/
+ console.log(mutawwifFilterData);
+ console.log(mutawwifId.toString());
+ 
+ console.log(pilgrimLocations);
+   /*for testing only*/
+  
+var mutawwifFilterData = mutawwifArr.filter(function (obj) {
   return obj.uniqueID == mutawwifId;
 });
-var mutawwifName = mutawwifFilterData.map(function(r){
+var mutawwifName = mutawwifFilterData.map(function (r) {
   return r.fullName;
 });
 
-var fullName = filterData.map(function(r) {
-  return r.firstName + ' '+ r.lastName;
+var fullName = filterData.map(function (r) {
+  return r.firstName + ' ' + r.lastName;
 });
-var y1 = filterData.map(function(s) {
+var y1 = filterData.map(function (s) {
   return s.uniqueID;
 });
-var personalImg = filterData.map(function(t) {
+var personalImg = filterData.map(function (t) {
   return t.imagePath;
 });
 
@@ -38,26 +73,9 @@ console.log(y1.toString());
 console.log(personalImg.toString());
 
 
-var nationality = filterData.map(function(r){
+var nationality = filterData.map(function (r) {
   return r.nationality;
 });
-
-
-/*for testing only*/
-console.log(mutawwifFilterData);
-console.log(mutawwifId.toString());
-
-/*for testing only*/
-
-/*profile.html*/
-$('.profile-usertitle-name').html(fullName);
-$('.profile-usertitle-job').text(y1);
-$(".img-haaji").attr("src", personalImg);
-
-$(".show-direction-btn").click(function () {
-  window.location.href='mapRouteWithoutMap.html';
-});
-
 
 
 /*info.html*/
@@ -66,7 +84,7 @@ $(".img-haaji").attr("src", personalImg);
 $('.profile-fullName').html(fullName);
 $('.profile-nationality').html(nationality);
 $('.profile-mutawwifName').html(mutawwifName);
-
+//profile-mak-loc-Name
 /*info.html*/
 
 
@@ -85,7 +103,7 @@ function initMap() {
   control.style.display = 'block';
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
-  var onChangeHandler = function() {
+  var onChangeHandler = function () {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
   document.getElementById('start').addEventListener('change', onChangeHandler);
@@ -99,7 +117,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     origin: start,
     destination: end,
     travelMode: 'DRIVING'
-  }, function(response, status) {
+  }, function (response, status) {
     if (status === 'OK') {
       directionsDisplay.setDirections(response);
     } else {
@@ -107,17 +125,3 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     }
   });
 }
-
-
-$(window).on('load', function() {
-  $('#collapseOne').collapse({toggle: true});
-  $('#collapseTwo').collapse({toggle: true});
-  $('#collapseThree').collapse({toggle: true});
-  $('#collapseFour').collapse({toggle: true});
-  $('#collapseFive').collapse({toggle: true});
-});
-
-var locationsArr = geolocation.pilgrimsLocationCollection;
-var locationFilterData = locationsArr.filter(function(obj) {
-  return obj.pilgrimId == myId;
-});
