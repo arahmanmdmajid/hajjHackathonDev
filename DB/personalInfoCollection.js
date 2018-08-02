@@ -1,9 +1,16 @@
 var personalInfo = {
 "type":"personalInfoCollection",
-"personalInfo":[{
-		"uniqueID":"AB00001",
-		"firstName":"Marium",
-		"lastName":"Islam",
+"personalInfo":[
+	{
+		"uniqueID":"891131",
+		"firstName":"Adel",
+		"lastName":"Ali",
+		"nationality":"Saudi"
+	},
+	{
+		"uniqueID":"988746",
+		"firstName":"AbdulAziz",
+		"lastName":"M.Abdul Majid",
 		"nationality":"Pakistani"
 	}]
 };
