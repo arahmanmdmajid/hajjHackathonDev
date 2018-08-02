@@ -9,34 +9,35 @@ ul.list-all{
 
 .profile-sidebar {
     padding: 20px 0 10px 0;
-    background: #fff;
 }
 
-.profile-userpic img {
-    float: none;
-    margin: 0 auto;
-    width: 50%;
-    height: 50%;
-    -webkit-border-radius: 50% !important;
-    -moz-border-radius: 50% !important;
-    border-radius: 50% !important;
-}
+
 
 .profile-usertitle {
     text-align: center;
     margin-top: 20px;
+    background: #2ccc71;
+    color: white;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 10px 0 1px;
+    margin-bottom: 10px;
 }
 
 .profile-usertitle-name {
-    color: #5a7391;
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 7px;
 }
 
 .profile-usertitle-job {
     text-transform: uppercase;
-    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -107,11 +108,54 @@ ul.list-all{
 
 .center-border {
     width: 100%;
-    background: #2ecc71;
     height: 100px;
     line-height: 100px;
     margin: 0 auto 10px;
 }
 .boxes-info a{
-    color:white;
+    color: black;
+    padding: 0;
+    margin-bottom: -8px;
+}
+.boxes-info a:nth-child(1), .boxes-info a:nth-child(2) {
+    border-bottom: 1px solid #2ccc71;
+}
+
+.boxes-info a:nth-child(odd) {
+    border-right: 1px solid #2ccc71;
+}
+
+.profile-userpic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.profile-userpic img {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+     -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+#bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+#bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
 }

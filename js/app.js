@@ -7,7 +7,7 @@ function onDeviceReady() {
       {
         cordova.plugins.barcodeScanner.scan(
             function (result) {
-              localStorage.setItem("id", result.text);
+              localStorage.setItem("idHajj", result.text);
               window.location = "profile.html";
 
             },
