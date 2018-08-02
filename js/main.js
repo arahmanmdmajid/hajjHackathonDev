@@ -1,5 +1,4 @@
 var myId = localStorage.getItem('idHajj');
-var myId = "988746";
 
 if (myId === null) {
     myId = " "
