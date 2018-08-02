@@ -120,11 +120,11 @@ ul.list-all{
     margin-bottom: -8px;
 }
 .boxes-info a:nth-child(1), .boxes-info a:nth-child(2) {
-    border-bottom: 1px solid #2ccc71;
+    border-bottom: 1px solid #2c3e50;
 }
 
 .boxes-info a:nth-child(odd) {
-    border-right: 1px solid #2ccc71;
+    border-right: 1px solid #2c3e50;
 }
 
 .profile-userpic {
