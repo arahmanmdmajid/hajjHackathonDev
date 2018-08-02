@@ -1,5 +1,8 @@
+
 //var myId = localStorage.getItem('idHajj');
 var myId = "988746";
+
+
 
 var personArr = personalInfo.personalInfo;
 var mutawwifArr = mutawwifInfo.completeInfo;
@@ -20,7 +23,7 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
 	   	 return r.fullName;
   });
 
-  var y = filterData.map(function(r) {
+  var fullName = filterData.map(function(r) {
     return r.firstName + ' '+ r.lastName;
   });
   var y1 = filterData.map(function(s) {
@@ -30,7 +33,7 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
     return t.imagePath;
   });
 
-  console.log(y.toString());
+  console.log(fullName.toString());
   console.log(y1.toString());
   console.log(personalImg.toString());
   
@@ -42,12 +45,13 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
 
   /*for testing only*/
  console.log(mutawwifFilterData);
-   console.log(mutawwifId.toString());
+ console.log(mutawwifId.toString());
   
    /*for testing only*/
   
 /*profile.html*/
-$('.profile-usertitle-name').html(y);
+
+$('.profile-usertitle-name').html(fullName);
 $('.profile-usertitle-job').text(y1);
 $(".img-haaji").attr("src", personalImg);
 
@@ -58,9 +62,9 @@ $(".show-direction-btn").click(function () {
 
 
 /*info.html*/
-$('.profile-usertitle-name-info').html(y);
+$('.profile-usertitle-name-info').html(fullName);
 $(".img-haaji").attr("src", personalImg);
-$('.profile-fullName').html(y);
+$('.profile-fullName').html(fullName);
 $('.profile-nationality').html(nationality);
 $('.profile-mutawwifName').html(mutawwifName);
 
