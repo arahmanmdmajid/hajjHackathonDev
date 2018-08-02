@@ -1,8 +1,10 @@
 var myId = localStorage.getItem('idHajj');
+var myId = "988746";
 
 
 var personArr = personalInfo.personalInfo;
 var mutawwifArr = mutawwifInfo.completeInfo;
+var locationsArr = geolocation.pilgrimsLocationCollection;
 
 var filterData = personArr.filter(function(obj) {
     return obj.uniqueID == myId;
@@ -30,20 +32,29 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
     return t.imagePath;
   });
 
+  var locationFilterData = locationsArr.filter(function(obj) {
+    return obj.pilgrimId == myId;
+  });
+
+
   console.log(fullName.toString());
   console.log(y1.toString());
   console.log(personalImg.toString());
+
   
 
   var nationality = filterData.map(function(r){
 	   return r.nationality;
   });
   
-
+var pilgrimLocations = locationFilterData.map(function(r){
+    return r.pilgrimLocation;
+});
   /*for testing only*/
  console.log(mutawwifFilterData);
  console.log(mutawwifId.toString());
-  
+ 
+ console.log(pilgrimLocations);
    /*for testing only*/
   
 /*profile.html*/
@@ -64,7 +75,7 @@ $(".img-haaji").attr("src", personalImg);
 $('.profile-fullName').html(fullName);
 $('.profile-nationality').html(nationality);
 $('.profile-mutawwifName').html(mutawwifName);
-
+//profile-mak-loc-Name
 /*info.html*/
 
 
