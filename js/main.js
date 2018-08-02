@@ -1,4 +1,4 @@
-var myId = localStorage.getItem('id');
+var myId = localStorage.getItem('idHajj');
 
 if (myId === null) {
   window.location.href = "no.html"
@@ -33,14 +33,12 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
   var personalImg = filterData.map(function(t) {
     return t.imagePath;
   });
-<<<<<<< HEAD
 
   console.log(y.toString());
   console.log(y1.toString());
   console.log(personalImg.toString());
   
 
-=======
   var nationality = filterData.map(function(r){
 	   return r.nationality;
   });
@@ -53,7 +51,6 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
    /*for testing only*/
   
 /*profile.html*/
->>>>>>> 656b5216dcc5794fcb66af1a0d1c993d62efc3e2
 $('.profile-usertitle-name').html(y);
 $('.profile-usertitle-job').text(y1);
 $(".img-haaji").attr("src", personalImg);
