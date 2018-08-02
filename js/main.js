@@ -33,7 +33,6 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
   var personalImg = filterData.map(function(t) {
     return t.imagePath;
   });
-<<<<<<< HEAD
 
   console.log(y.toString());
   console.log(y1.toString());
