@@ -1,9 +1,5 @@
 var myId = localStorage.getItem('id');
 
-if (localStorage.getItem("myId") === null) {
-  window.location.href = "no.html"
-}
-
 
 var personArr = personalInfo.personalInfo;
 var mutawwifArr = mutawwifInfo.completeInfo;
