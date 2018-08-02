@@ -49,7 +49,11 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
 $('.profile-usertitle-name').html(y);
 $('.profile-usertitle-job').text(y1);
 $(".img-haaji").attr("src", personalImg);
-/*profile.html*/
+
+$(".show-direction-btn").click(function () {
+    window.location.href='mapRouteWithoutMap.html';
+});
+
 
 
 /*info.html*/
