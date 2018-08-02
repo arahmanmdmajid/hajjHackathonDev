@@ -26,8 +26,8 @@
     <link href="css/style.css" rel="stylesheet" id="theme-stylesheet">
     <link rel="shortcut icon" href="favicon.png">
     <style>
-        #right-panel {
-            display: none;
+        #map {
+            margin-right: auto;
         }
     </style>
 </head>
@@ -64,7 +64,7 @@
     <select id="start">
         <option value="masjid al-haram, sa">Masjid al-Haram</option>
         <option value="masjid-e-nabawi, sa">Masjid-e-Nabawi</option>
-        <option value="jeddah international exhibition & convention center, sa">Jeddah International Exhibition & Convention Center</option>
+        <option value="jeddah international exhibition & convention center, sa">Jeddah Int. Ex. & Conv. Ctr</option>
         <option value="jabal ar-rahmah, sa">Jabal ar-Rahmah</option>
         <option value="muzdalifa, mecca, sa">Muzdalifa</option>
     </select>
@@ -73,14 +73,16 @@
     <select id="end">
         <option value="masjid al-haram, sa">Masjid al-Haram</option>
         <option value="masjid-e-nabawi, sa">Masjid-e-Nabawi</option>
-        <option value="jeddah international exhibition & convention center, sa">Jeddah International Exhibition & Convention Center</option>
+        <option value="jeddah international exhibition & convention center, sa">Jeddah Int. Ex. & Conv. Ctr</option>
         <option value="jabal ar-rahmah, sa">Jabal ar-Rahmah</option>
         <option value="muzdalifa, mecca, sa">Muzdalifa</option>
     </select>
-    <button class="show-direction-btn btn btn-success btn-block">Get Direction</button>
+    <button class="show-direction-btn btn btn-success btn-block" data-toggle="collapse" data-target="#right-panel" aria-expanded="false" aria-controls="right-panel">Get Direction</button>
 </div>
-<div id="right-panel"></div>
 <div id="map"></div>
+<div class="collapse" id="right-panel">
+    <div class="well"></div>
+</div>
 
 
 
