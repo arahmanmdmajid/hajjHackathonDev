@@ -22,12 +22,13 @@
     <!-- styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- theme stylesheet -->
-    <link href="css/mapRouteWithInstruct.css" rel="stylesheet">
+    <link href="css/mapRouteWithoutMap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" id="theme-stylesheet">
     <link rel="shortcut icon" href="favicon.png">
+
     <style>
-        #map {
-            margin-right: auto;
+        #right-panel {
+            width: 100%;
         }
     </style>
 </head>
@@ -64,7 +65,7 @@
     <select id="start">
         <option value="masjid al-haram, sa">Masjid al-Haram</option>
         <option value="masjid-e-nabawi, sa">Masjid-e-Nabawi</option>
-        <option value="jeddah international exhibition & convention center, sa">Jeddah Int. Ex. & Conv. Ctr</option>
+        <option value="jeddah international exhibition & convention center, sa">Jeddah International Exhibition & Convention Center</option>
         <option value="jabal ar-rahmah, sa">Jabal ar-Rahmah</option>
         <option value="muzdalifa, mecca, sa">Muzdalifa</option>
     </select>
@@ -73,16 +74,15 @@
     <select id="end">
         <option value="masjid al-haram, sa">Masjid al-Haram</option>
         <option value="masjid-e-nabawi, sa">Masjid-e-Nabawi</option>
-        <option value="jeddah international exhibition & convention center, sa">Jeddah Int. Ex. & Conv. Ctr</option>
+        <option value="jeddah international exhibition & convention center, sa">Jeddah International Exhibition & Convention Center</option>
         <option value="jabal ar-rahmah, sa">Jabal ar-Rahmah</option>
         <option value="muzdalifa, mecca, sa">Muzdalifa</option>
     </select>
-    <button class="show-direction-btn btn btn-success btn-block" data-toggle="collapse" data-target="#right-panel" aria-expanded="false" aria-controls="right-panel">Get Direction</button>
+    <button class="show-direction-btn btn btn-success btn-block">Get Direction</button>
+
 </div>
+<div id="right-panel"></div>
 <div id="map"></div>
-<div class="collapse" id="right-panel">
-    <div class="well"></div>
-</div>
 
 
 
@@ -91,6 +91,9 @@
 <script src="DB/locationData.js"></script>
 <script src="DB/personalInfoCollection.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+</script>
 
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBipnTMBmt3HJIMFaIPB3iQ61g-MZydPzQ&callback=initMap">
