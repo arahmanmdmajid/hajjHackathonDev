@@ -2,12 +2,12 @@ var personalInfo = {
   "type": "personalInfoCollection",
   "personalInfo": [
     {
-      "uniqueID": " ",
+      "uniqueID": "123456",
       "firstName": "You're not Authorized",
       "lastName": "",
       "nationality": "",
       "imagePath": "img/empty.png",
-      "mutawwifID": "123456"
+      "mutawwifID": ""
     },
     {
       "uniqueID": "891131",
