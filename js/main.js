@@ -39,7 +39,6 @@ var mutawwifFilterData = mutawwifArr.filter(function(obj) {
   console.log(personalImg.toString());
   
 
-=======
   var nationality = filterData.map(function(r){
 	   return r.nationality;
   });
