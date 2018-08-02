@@ -161,3 +161,17 @@ ul.list-all{
     min-width: 50%;
     min-height: 50%;
 }
+
+.anchor-back {
+    display: block;
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    padding-right: 15px;
+    color: #928888;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
