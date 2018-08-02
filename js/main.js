@@ -1,6 +1,6 @@
 var myId = localStorage.getItem('id');
 
-if (localStorage.getItem("myId") === null) {
+if (myId === null) {
   window.location.href = "no.html"
 }
 
