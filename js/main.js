@@ -1,8 +1,8 @@
 var myId = localStorage.getItem('idHajj');
-
-if (myId === null) {
-  window.location.href = "no.html"
-}
+//
+// if (myId === null) {
+//   window.location.href = "no.html"
+// }
 
 
 var personArr = personalInfo.personalInfo;
