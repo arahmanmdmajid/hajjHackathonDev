@@ -27,6 +27,9 @@ var filterData = personArr.filter(function(obj) {
  $('.profile-usertitle-name').html(y);
 $('.profile-usertitle-job').text(y1);
 $(".img-haaji").attr("src", personalImg);
+$(".show-direction-btn").click(function () {
+    window.location.href='mapRouteWithoutMap.html';
+});
 
 function initMap() {
     var directionsDisplay = new google.maps.DirectionsRenderer;
