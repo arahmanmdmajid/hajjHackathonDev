@@ -126,7 +126,7 @@ $(window).on('load', function () {
 var locationsArr = geolocation.pilgrimsLocationCollection;
 var locationFilterData = locationsArr.filter(function(obj) {
   //return obj.pilgrimId == myId;
-  return obj.category == category;
+  return obj.category === category;
 });
 
 var category;
@@ -212,9 +212,13 @@ var locationFilterData = locationsArr.filter(function (obj) {
     return obj.pilgrimId == myId;
 });
 
-var category = filterData.pilgrimsLocationCollection[0].category;
 
-console.log(category);
+var lat = filterData[0].pilgrimLocation.filter(function(obj){
+    return obj.geometry.lat == 'mudalifa';
+});
+
+
+console.log(lat);
 
 $(".makkahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
