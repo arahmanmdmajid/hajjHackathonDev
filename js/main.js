@@ -125,3 +125,7 @@ var locationsArr = geolocation.pilgrimsLocationCollection;
 var locationFilterData = locationsArr.filter(function (obj) {
     return obj.pilgrimId == myId;
 });
+
+$(".makkahLoc").click(function () {
+    window.location.href = 'mapRouteWithLocation.html';
+});
