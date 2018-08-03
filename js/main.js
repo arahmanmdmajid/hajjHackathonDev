@@ -1,6 +1,6 @@
 var myId = localStorage.getItem('idHajj');
 if (myId === null) {
-    myId = 123456;
+    myId = 988746;
 }
 
 
@@ -212,6 +212,13 @@ var locationFilterData = locationsArr.filter(function (obj) {
     return obj.pilgrimId == myId;
 });
 
+var category = filterData.pilgrimsLocationCollection[0].category;
+
+console.log(category);
+
 $(".makkahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
+
+    //localStorage.setItem('lat','0000');
+    //localStorage.setItem('long','0000');
 });
