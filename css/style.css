@@ -185,3 +185,12 @@ ul.list-all{
     border-color: #ddd;
 }
 
+.center-border >p {
+    font-size: 16px;
+}
+.navbar-header {
+    background: #fcf8e3;
+}
+div#bs-example-navbar-collapse-1 {
+    background-color: #fcf8e3;
+}
