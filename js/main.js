@@ -246,7 +246,7 @@ $(".minaLoc").click(function () {
 
 $(".muzdalifahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
-    lat = locationFilterData[0].pilgrimLocation[3.geometry.lat;
+    lat = locationFilterData[0].pilgrimLocation[3].geometry.lat;
     long = locationFilterData[0].pilgrimLocation[3].geometry.long;
     localStorage.setItem('lat', lat);
     localStorage.setItem('long',long);
