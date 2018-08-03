@@ -177,5 +177,11 @@ ul.list-all{
 }
 
 #floating-panel{
-    z-index:9999;
+    z-index:9999 !important;
 }
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #fcf8e3;
+    border-color: #ddd;
+}
+
