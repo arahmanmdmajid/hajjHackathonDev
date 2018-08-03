@@ -98,7 +98,6 @@ const geolocation = {
     {
     "pilgrimId":"988746",
     "pilgrimLocation":[
-<<<<<<< HEAD
       {
         "locID":"loc567",
         "category":"makkah",
@@ -110,16 +109,6 @@ const geolocation = {
           "floorNum":"5th",
           "flatNum":"5",
           "roomNum":"2"
-=======
-        {
-          "locID":"loc567",
-          "category":"makkah",
-          "geometry": {
-            "type": "Point",
-            "lat":"21.4107",
-            "long":"39.8643"
-          }
->>>>>>> ac67da8485ea80e833cf68f9680df58ac28184dc
         },
         "geometry": {
           "type": "Point",

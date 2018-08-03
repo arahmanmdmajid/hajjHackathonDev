@@ -6,7 +6,7 @@ if (myId === null) {
 
 
 if (myId != 988746 && myId != 891131 && myId != null) {
-    myId = '123456';
+    myId = '988746';
     console.log(2, myId);
 
 }
