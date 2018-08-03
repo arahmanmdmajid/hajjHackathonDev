@@ -212,9 +212,9 @@ var locationFilterData = locationsArr.filter(function (obj) {
     return obj.pilgrimId == myId;
 });
 
-var category = filterData.pilgrimsLocationCollection[0].category;
+// var category = filterData.pilgrimsLocationCollection[0].category;
 
-console.log(category);
+// console.log(category);
 
 $(".makkahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
@@ -222,3 +222,19 @@ $(".makkahLoc").click(function () {
     //localStorage.setItem('lat','0000');
     //localStorage.setItem('long','0000');
 });
+
+
+var mutawwifName = mutawwifFilterData.map(function (r) {return r.fullName;});
+var mutawwifContNum = mutawwifFilterData.map(function (r) {return r.mainContactNumber;});
+var mutawwifMkContNum = mutawwifFilterData.map(function (r) {return r.makkahContactNumber;});
+var mutawwifMedContNum = mutawwifFilterData.map(function (r) {return r.medinahContactNumber;});
+var mutawwifMinContNum = mutawwifFilterData.map(function (r) {return r.minaContactNumber;});
+var mutawwifAraContNum = mutawwifFilterData.map(function (r) {return r.arafatContactNumber;});
+var mutawwifMuzContNum = mutawwifFilterData.map(function (r) {return r.muzdalifahContactNumber;});
+$('#mutawwif-name').text(mutawwifName);
+$('#mutawwif-cont-num').text(mutawwifContNum);
+$('#mutawwif-mk-cont-num').text(mutawwifMkContNum);
+$('#mutawwif-med-cont-num').text(mutawwifMedContNum);
+$('#mutawwif-min-cont-num').text(mutawwifMinContNum);
+$('#mutawwif-ara-cont-num').text(mutawwifAraContNum);
+$('#mutawwif-muz-cont-num').text(mutawwifMuzContNum);
