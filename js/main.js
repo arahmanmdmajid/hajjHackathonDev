@@ -1,12 +1,10 @@
 var myId = localStorage.getItem('idHajj');
-console.log('0', myId);
 if (myId === null) {
     myId = 123456;
 }
 
 
 if (myId != 988746 && myId != 891131 && myId != null) {
-    console.log(1 ,myId);
     myId = '123456';
     console.log(2, myId);
 }
