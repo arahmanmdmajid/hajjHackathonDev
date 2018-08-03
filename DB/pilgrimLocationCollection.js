@@ -8,8 +8,8 @@ const geolocation = {
           "category":"makkah",
           "geometry": {
             "type": "Point",
-            "lat":"-76.702448",
-            "long":"42.753959"
+            "lat":"21",
+            "long":"39"
           }
         },
         {
@@ -58,8 +58,8 @@ const geolocation = {
           "category":"makkah",
           "geometry": {
             "type": "Point",
-            "lat":"-76.702448",
-            "long":"42.753959"
+            "lat":"21.4107",
+            "long":"39.8643"
           }
         },
         {

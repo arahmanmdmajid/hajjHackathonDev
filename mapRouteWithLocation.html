@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hajj Hackathon">
+    <meta name="author" content="hajj_hackathon.com | hajj_hackathon.com">
+    <meta name="keywords" content="">
+
+    <title>
+        Hajj Hackathon
+    </title>
+
+    <meta name="keywords" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+    <!-- styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- theme stylesheet -->
+    <link href="css/mapRouteWithInstruct.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" id="theme-stylesheet">
+    <link rel="shortcut icon" href="favicon.png">
+    <style>
+        #map {
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="profile.html">Hajj Assist</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="mapRoute.html">Map Route</a></li>
+                <li><a href="mapRouteWithInstruct.html">Map Details</a></li>
+                <li><a href="mapRouteLocalization.html">Map with Language</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="floating-panel">
+<!--    <strong>Start:</strong>
+    <select id="start">
+        <option value="masjid al-haram, sa">Masjid al-Haram</option>
+        <option value="masjid-e-nabawi, sa">Masjid-e-Nabawi</option>
+        <option value="jeddah international exhibition & convention center, sa">Jeddah Int. Ex. & Conv. Ctr</option>
+        <option value="jabal ar-rahmah, sa">Jabal ar-Rahmah</option>
+        <option value="muzdalifa, mecca, sa">Muzdalifa</option>
+    </select>
+    <br>
+    <strong>End:</strong>
+    <select id="end">
+        <option value="masjid al-haram, sa">Masjid al-Haram</option>
+        <option value="masjid-e-nabawi, sa">Masjid-e-Nabawi</option>
+        <option value="jeddah international exhibition & convention center, sa">Jeddah Int. Ex. & Conv. Ctr</option>
+        <option value="jabal ar-rahmah, sa">Jabal ar-Rahmah</option>
+        <option value="muzdalifa, mecca, sa">Muzdalifa</option>
+    </select>
+-->    <button class="show-direction-btn btn btn-success btn-block" data-toggle="collapse" data-target="#right-panel" aria-expanded="false" aria-controls="right-panel">Get Direction</button>
+</div>
+<div id="map"></div>
+<div class="collapse" id="right-panel">
+    <div class="well"></div>
+</div>
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="DB/locationData.js"></script>
+<script src="DB/mutawwifInfoCollection.js"></script>
+<script src="DB/personalInfoCollection.js"></script>
+<script src="DB/pilgrimLocationCollection.js"></script>
+<script src="js/mapRouteWithLocation.js"></script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBipnTMBmt3HJIMFaIPB3iQ61g-MZydPzQ&callback=initMap">
+</script>
+
+
+</body>
+</html>
