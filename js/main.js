@@ -1,7 +1,7 @@
 var myId = localStorage.getItem('idHajj');
 
 if (myId === null){
-    myId = '123456';
+    myId = '988746';
 }
 
 var personArr = personalInfo.personalInfo;
@@ -119,5 +119,85 @@ $(window).on('load', function() {
 
 var locationsArr = geolocation.pilgrimsLocationCollection;
 var locationFilterData = locationsArr.filter(function(obj) {
-  return obj.pilgrimId == myId;
+  //return obj.pilgrimId == myId;
+  return obj.category == category;
 });
+
+var category;
+$('a[href="#collapseOne"]').click(function(e){category = 'makkah';});
+$('a[href="#collapseTwo"]').click(function(e){category = 'medina';});
+$('a[href="#collapseThree"]').click(function(e){category = 'mina';});
+$('a[href="#collapseForth"]').click(function(e){category = 'mudalifa';});
+$('a[href="#collapseFifth"]').click(function(e){category = 'arafat';});
+
+
+var filterData = locationsArr.filter(function(obj) {
+  return obj.pilgrimId == myId && obj.category == category;
+});
+
+var mk = filterData[0].pilgrimLocation.filter(function(obj){
+  return obj.category == 'makkah';
+});
+var med = filterData[0].pilgrimLocation.filter(function(obj){
+  return obj.category == 'medina';
+});
+var min = filterData[0].pilgrimLocation.filter(function(obj){
+  return obj.category == 'mina';
+});
+var muz = filterData[0].pilgrimLocation.filter(function(obj){
+  return obj.category == 'mudalifa';
+});
+var ara = filterData[0].pilgrimLocation.filter(function(obj){
+  return obj.category == 'arafat';
+});
+
+console.log(mk[0].address.distName, med[0].address.buildingName);
+
+$('#address-disct-mk').text(mk[0].address.distName);
+$('#address-st-name-mk').text(mk[0].address.streetName);
+$('#address-build-name-mk').text(mk[0].address.buildingName);
+$('#address-build-num-mk').text(mk[0].address.buildingNum);
+$('#address-floor-num-mk').text(mk[0].address.floorNum);
+$('#address-flat-num-mk').text(mk[0].address.flatNum);
+$('#address-room-num-mk').text(mk[0].address.roomNum);
+
+
+$('#address-disct-med').text(med[0].address.distName);
+$('#address-st-name-med').text(med[0].address.streetName);
+$('#address-build-name-med').text(med[0].address.buildingName);
+$('#address-build-num-med').text(med[0].address.buildingNum);
+$('#address-floor-num-med').text(med[0].address.floorNum);
+$('#address-flat-num-med').text(med[0].address.flatNum);
+$('#address-room-num-med').text(med[0].address.roomNum);
+
+
+$('#address-disct-min').text(min[0].address.distName);
+$('#address-st-name-min').text(min[0].address.streetName);
+$('#address-build-name-min').text(min[0].address.buildingName);
+$('#address-build-num-min').text(min[0].address.buildingNum);
+$('#address-floor-num-min').text(min[0].address.floorNum);
+$('#address-flat-num-min').text(min[0].address.flatNum);
+$('#address-room-num-min').text(min[0].address.roomNum);
+
+
+$('#address-disct-muz').text(muz[0].address.distName);
+$('#address-st-name-muz').text(muz[0].address.streetName);
+$('#address-build-name-muz').text(muz[0].address.buildingName);
+$('#address-build-num-muz').text(muz[0].address.buildingNum);
+$('#address-floor-num-muz').text(muz[0].address.floorNum);
+$('#address-flat-num-muz').text(muz[0].address.flatNum);
+$('#address-room-num-muz').text(muz[0].address.roomNum);
+
+
+
+$('#address-disct-ara').text(ara[0].address.distName);
+$('#address-st-name-ara').text(ara[0].address.streetName);
+$('#address-build-name-ara').text(ara[0].address.buildingName);
+$('#address-build-num-ara').text(ara[0].address.buildingNum);
+$('#address-floor-num-ara').text(ara[0].address.floorNum);
+$('#address-flat-num-ara').text(ara[0].address.flatNum);
+$('#address-room-num-ara').text(ara[0].address.roomNum);
+
+
+//$('#address-disct').html(locationFilterData[0].);
+//console.log(locationFilterData);
