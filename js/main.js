@@ -126,7 +126,7 @@ $(window).on('load', function () {
 var locationsArr = geolocation.pilgrimsLocationCollection;
 var locationFilterData = locationsArr.filter(function(obj) {
   //return obj.pilgrimId == myId;
-  return obj.category == category;
+  return obj.category === category;
 });
 
 var category;
@@ -212,9 +212,6 @@ var locationFilterData = locationsArr.filter(function (obj) {
     return obj.pilgrimId == myId;
 });
 
-// var category = filterData.pilgrimsLocationCollection[0].category;
-
-// console.log(category);
 
 $(".makkahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
