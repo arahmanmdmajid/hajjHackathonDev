@@ -238,3 +238,6 @@ $('#mutawwif-med-cont-num').text(mutawwifMedContNum);
 $('#mutawwif-min-cont-num').text(mutawwifMinContNum);
 $('#mutawwif-ara-cont-num').text(mutawwifAraContNum);
 $('#mutawwif-muz-cont-num').text(mutawwifMuzContNum);
+
+
+console.log(locationFilterData[0].pilgrimLocation);
