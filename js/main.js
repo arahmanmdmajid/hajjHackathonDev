@@ -217,40 +217,45 @@ var locationFilterData = locationsArr.filter(function (obj) {
 
 console.log(locationFilterData[0].pilgrimLocation[0]);
 
-var lat = locationFilterData[0].pilgrimLocation[0].geometry.lat;
-var long = locationFilterData[0].pilgrimLocation[0].geometry.long;
+var lat; //= locationFilterData[0].pilgrimLocation[0].geometry.lat;
+var long; //= locationFilterData[0].pilgrimLocation[0].geometry.long;
 
 $(".makkahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
-
+    lat = locationFilterData[0].pilgrimLocation[0].geometry.lat;
+    long = locationFilterData[0].pilgrimLocation[0].geometry.long;
     localStorage.setItem('lat', lat);
     localStorage.setItem('long',long);
 });
 
 $(".medinaLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
-
+    lat = locationFilterData[0].pilgrimLocation[1].geometry.lat;
+    long = locationFilterData[0].pilgrimLocation[1].geometry.long;
     localStorage.setItem('lat', lat);
     localStorage.setItem('long',long);
 });
 
 $(".minaLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
-
+    lat = locationFilterData[0].pilgrimLocation[2].geometry.lat;
+    long = locationFilterData[0].pilgrimLocation[2].geometry.long;
     localStorage.setItem('lat', lat);
     localStorage.setItem('long',long);
 });
 
 $(".muzdalifahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
-
+    lat = locationFilterData[0].pilgrimLocation[3.geometry.lat;
+    long = locationFilterData[0].pilgrimLocation[3].geometry.long;
     localStorage.setItem('lat', lat);
     localStorage.setItem('long',long);
 });
 
 $(".arafatLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
-
+    lat = locationFilterData[0].pilgrimLocation[4].geometry.lat;
+    long = locationFilterData[0].pilgrimLocation[4].geometry.long;
     localStorage.setItem('lat', lat);
     localStorage.setItem('long',long);
 });
