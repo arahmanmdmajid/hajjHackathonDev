@@ -26,7 +26,9 @@
     <link rel="shortcut icon" href="favicon.png">
 </head>
 <body>
-
+    <div id="bg">
+        <img src="img/hajj-bg.jpg" alt="">
+    </div>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,7 +64,7 @@
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="http://via.placeholder.com/30x30" width="30" class="img-responsive" alt="">
+                    <img src="img/empty.png" class="img-responsive img-haaji" alt="Haji">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
@@ -77,37 +79,43 @@
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
                 <!-- END SIDEBAR BUTTONS -->
-                <!-- SIDEBAR MENU -->
-                <div class="profile-usermenu">
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="#">
-                                <i class="glyphicon glyphicon-home"></i>
-                                Overview </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="glyphicon glyphicon-user"></i>
-                                Account Settings </a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="glyphicon glyphicon-ok"></i>
-                                Tasks </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="glyphicon glyphicon-flag"></i>
-                                Help </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- END MENU -->
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="profile-content">
-                Some user related content goes here...
+                <div class="container-fluid">
+                    <h3>Mutawwif Details</h3>
+                    <p>This is the Mutawwif details</p>            
+                    <table class="table table-bordered">
+                     
+                      <tbody>
+                        <tr>
+                          <td>Mutawwif Name</td>
+                          <td id="mutawwif-name">-</td>
+                        </tr>
+                        <tr>
+                          <td>Main Contact Number</td>
+                          <td id="mutawwif-cont-num">-</td>
+                        </tr>
+                        <tr>
+                          <td>Makkah Contact Number</td>
+                          <td id="mutawwif-mk-cont-num">-</td>
+                        </tr>
+                        <tr>
+                            <td>Medinah Contact Number</td>
+                            <td id="mutawwif-med-cont-num">-</td>
+                          </tr>
+                          <tr>
+                            <td>Mina Contact Number</td>
+                            <td id="mutawwif-min-cont-num">-</td>
+                          </tr>
+                          <tr>
+                            <td>Arafat Contact Number</td>
+                            <td id="mutawwif-ara-cont-num">-</td>
+                          </tr>
+                          <tr>
+                            <td>Muzdalifa Contact Number</td>
+                            <td id="mutawwif-muz-cont-num">-</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
             </div>
         </div>
     </div>
@@ -118,6 +126,10 @@
 _________________________________________________________ -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="DB/locationData.js"></script>
+<script src="DB/mutawwifInfoCollection.js"></script>
+<script src="DB/personalInfoCollection.js"></script>
+<script src="DB/pilgrimLocationCollection.js"></script>
 <script src="js/main.js"></script>
 
 </body>
