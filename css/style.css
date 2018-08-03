@@ -185,3 +185,22 @@ ul.list-all{
     border-color: #ddd;
 }
 
+.center-border >p {
+    font-size: 16px;
+}
+.navbar-header {
+    background: #fcf8e3;
+}
+div#bs-example-navbar-collapse-1 {
+    background-color: #fcf8e3;
+}
+
+.center-border span.glyphicon{
+    display: block;
+    position: relative;
+    top: 30px;
+}
+.center-border >p {
+    font-size: 16px;
+    line-height: 95px;
+}
