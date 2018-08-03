@@ -17,8 +17,8 @@ const geolocation = {
           },
           "geometry": {
             "type": "Point",
-            "lat":"21",
-            "long":"39"
+            "lat":"21.4115",
+            "long":"39.8645"
           }
         },
         {
@@ -35,8 +35,8 @@ const geolocation = {
           },
           "geometry": {
             "type": "Point",
-            "lat":"-76.702448",
-            "long":"42.753959"
+              "lat":"24.4730",
+              "long":"39.6178"
           }
         },
         {
@@ -53,8 +53,8 @@ const geolocation = {
           },
           "geometry": {
             "type": "Point",
-            "lat":"-76.702448",
-            "long":"42.753959"
+            "lat":"21.4116",
+            "long":"39.8869"
           }
         },
         {
@@ -71,8 +71,8 @@ const geolocation = {
           },
           "geometry": {
             "type": "Point",
-            "lat":"-76.702448",
-            "long":"42.753959"
+              "lat":"21.3901",
+              "long":"39.9100"
           }
         },
         {
@@ -89,8 +89,8 @@ const geolocation = {
           },
           "geometry": {
             "type": "Point",
-            "lat":"-76.702448",
-            "long":"42.753959"
+            "lat":"21.3495",
+            "long":"39.9809"
           }
         }	
       ]
@@ -112,8 +112,8 @@ const geolocation = {
         },
         "geometry": {
           "type": "Point",
-          "lat":"-76.702448",
-          "long":"42.753959"
+            "lat":"21.4115",
+            "long":"39.8645"
         }
       },
       {
@@ -130,8 +130,8 @@ const geolocation = {
         },
         "geometry": {
           "type": "Point",
-          "lat":"-76.702448",
-          "long":"42.753959"
+          "lat":"24.4730",
+          "long":"39.6178"
         }
       },
       {
@@ -148,8 +148,8 @@ const geolocation = {
         },
         "geometry": {
           "type": "Point",
-          "lat":"-76.702448",
-          "long":"42.753959"
+            "lat":"21.4116",
+            "long":"39.8869"
         }
       },
       {
@@ -166,8 +166,8 @@ const geolocation = {
         },
         "geometry": {
           "type": "Point",
-          "lat":"-76.702448",
-          "long":"42.753959"
+          "lat":"21.3901",
+          "long":"39.9100"
         }
       },
       {
@@ -184,8 +184,8 @@ const geolocation = {
         },
         "geometry": {
           "type": "Point",
-          "lat":"-76.702448",
-          "long":"42.753959"
+            "lat":"21.3495",
+            "long":"39.9809"
         }
       }	
     ]

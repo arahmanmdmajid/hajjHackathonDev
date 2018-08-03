@@ -213,11 +213,14 @@ var locationFilterData = locationsArr.filter(function (obj) {
 });
 
 
+var lat = locationFilterData[0].pilgrimLocation[0].geometry.lat;
+var long = locationFilterData[0].pilgrimLocation[0].geometry.long;
+
 $(".makkahLoc").click(function () {
     window.location.href = 'mapRouteWithLocation.html';
 
-    //localStorage.setItem('lat','0000');
-    //localStorage.setItem('long','0000');
+    localStorage.setItem('lat',lat);
+    localStorage.setItem('long',long);
 });
 
 
@@ -237,4 +240,3 @@ $('#mutawwif-ara-cont-num').text(mutawwifAraContNum);
 $('#mutawwif-muz-cont-num').text(mutawwifMuzContNum);
 
 
-console.log(locationFilterData[0].pilgrimLocation);
