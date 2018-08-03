@@ -124,6 +124,7 @@ $(window).on('load', function () {
 });
 
 var locationsArr = geolocation.pilgrimsLocationCollection;
+
 var locationFilterData = locationsArr.filter(function(obj) {
   //return obj.pilgrimId == myId;
   return obj.category == category;
